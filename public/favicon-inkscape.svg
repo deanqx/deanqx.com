@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 4.2333332 4.2333333"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="favicon-inkscape.svg"
+   inkscape:export-filename="favicon.svg"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showborder="false"
+     inkscape:zoom="32"
+     inkscape:cx="0.734375"
+     inkscape:cy="4.84375"
+     inkscape:window-width="2556"
+     inkscape:window-height="1373"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#00000000"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0.00095561"
+         id="stop1" />
+      <stop
+         style="stop-color:#5eb564;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="2.1166666"
+       y1="1.6218837"
+       x2="3.7683316"
+       y2="1.6218837"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.2,0.22221895,-0.18956439)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.514396"
+       id="rect2"
+       width="4.2333331"
+       height="4.2333331"
+       x="1.9981384e-08"
+       y="0"
+       ry="0.81596321"
+       inkscape:export-filename="favicon.svg"
+       inkscape:export-xdpi="192"
+       inkscape:export-ydpi="192" />
+    <path
+       d="m 1.1305118,3.6249033 q -0.38672731,0 -0.61876373,-0.2668417 -0.23203642,-0.2707091 -0.23203642,-0.8043929 0,-0.5336839 0.23203642,-0.8043931 0.2359037,-0.2745764 0.62263103,-0.2745764 0.2397709,0 0.3905946,0.088947 0.154691,0.088947 0.2513729,0.2165672 h 0.023203 Q 1.7956847,1.7299392 1.7840806,1.633257 1.7763502,1.5327084 1.7763502,1.4746988 V 0.6471026 h 0.3403164 v 2.939128 H 1.8420902 L 1.7918156,3.3077869 H 1.7763466 Q 1.6835316,3.4392743 1.528841,3.5320888 1.37415,3.6249028 1.1305118,3.6249033 Z m 0.054142,-0.2823109 q 0.3287184,0 0.4602056,-0.1778946 Q 1.780214,2.982936 1.780214,2.6194123 v -0.061876 q 0,-0.3867274 -0.1276202,-0.5916928 -0.12762,-0.2088329 -0.4718073,-0.2088329 -0.27457636,0 -0.41379826,0.2204346 -0.13535459,0.2165674 -0.13535459,0.5839584 0,0.3712583 0.13535459,0.5762238 0.1392219,0.2049656 0.41766556,0.2049651 z"
+       id="text1"
+       style="font-size:3.22171px;fill-rule:evenodd;stroke-width:0.020142"
+       aria-label="d" />
+    <rect
+       style="fill:url(#linearGradient2);fill-rule:evenodd;stroke-width:0.0159492"
+       id="rect1"
+       width="1.6516651"
+       height="0.3175"
+       x="2.3388855"
+       y="1.5979462"
+       ry="0.15875" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke-width:0.0144523;fill-opacity:1"
+       id="rect1-6"
+       width="1.3561815"
+       height="0.3175"
+       x="2.3471537"
+       y="2.4156742"
+       ry="0.15875" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke-width:0.0159492;fill-opacity:1"
+       id="rect1-2"
+       width="1.6516651"
+       height="0.3175"
+       x="2.3388855"
+       y="3.2334023"
+       ry="0.15875" />
+  </g>
+</svg>

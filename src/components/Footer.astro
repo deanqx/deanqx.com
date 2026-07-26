@@ -1,0 +1,66 @@
+---
+const today = new Date();
+---
+
+<footer>
+  <ul>
+    <li>
+      <a class="mobile-only set-dark-mode" onclick="toggleTheme()">
+        Use darkmode
+      </a>
+      <a class="mobile-only set-light-mode" onclick="toggleTheme()">
+        Use lightmode
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/deanqx" target="_blank"> Github </a>
+    </li>
+    <li>
+      <a href="/contact"> Contact </a>
+    </li>
+  </ul>
+  <div>&copy; {today.getFullYear()} deanqx. All rights reserved.</div>
+  <p><i>Written by a human</i></p>
+</footer>
+<style>
+  footer {
+    margin-top: auto;
+    padding: 1rem 1rem 1.5rem 1rem;
+    background: var(--bg);
+    color: var(--text-muted);
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    padding: 0;
+  }
+  a {
+    padding: 0 1em;
+  }
+  ul li:not(:last-child) a {
+    /* Vertical line */
+    border-right: 1px solid var(--text-muted);
+  }
+  .vertical-line {
+    width: 1px;
+    height: 1em;
+    background-color: var(--text-muted);
+    margin: 0 0.7em;
+  }
+  .split-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+  .set-dark-mode,
+  :root.dark .set-light-mode {
+    display: block;
+  }
+  .set-light-mode,
+  :root.dark .set-dark-mode {
+    display: none;
+  }
+</style>

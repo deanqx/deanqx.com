@@ -1,0 +1,75 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import HeaderTitle from "./HeaderTitle.astro";
+import moonIcon from "../assets/moon.svg?raw";
+import sunIcon from "../assets/sun.svg?raw";
+import githubIcon from "../assets/github.svg?raw";
+---
+
+<header>
+  <nav>
+    <HeaderTitle />
+    <ul>
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/portfolio">Portfolio</HeaderLink>
+    </ul>
+    <div class="desktop-only nav-actions">
+      <div class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="moon-icon"><Fragment set:html={moonIcon} /></span>
+        <span class="sun-icon"><Fragment set:html={sunIcon} /></span>
+      </div>
+      <a class="icon-btn" href="https://github.com/deanqx" target="_blank">
+        <Fragment set:html={githubIcon} />
+      </a>
+    </div>
+  </nav>
+</header>
+<style>
+  header {
+    padding: 2vw;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 3px;
+    margin: 0;
+    padding: 4px;
+    background-color: var(--bg-overlay);
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-size) var(--border-color);
+  }
+  .nav-actions,
+  .nav-actions a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .icon-btn {
+    color: var(--text-p);
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .icon-btn:hover {
+    color: var(--text);
+  }
+  .moon-icon,
+  :root.dark .sun-icon {
+    display: block;
+  }
+  .sun-icon,
+  :root.dark .moon-icon {
+    display: none;
+  }
+</style>
