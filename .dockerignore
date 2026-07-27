@@ -1,4 +1,5 @@
-.git
-dist
 .astro
+.git
+.github
+dist
 node_modules
