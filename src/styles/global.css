@@ -49,7 +49,7 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: var(--text);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   justify-content: center;
 }
@@ -93,6 +93,7 @@ h3 {
   margin-bottom: 1em;
 }
 
+ol,
 ul {
   padding-left: 2em;
   margin-bottom: 1em;
