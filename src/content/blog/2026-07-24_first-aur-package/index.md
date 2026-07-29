@@ -2,6 +2,7 @@
 title: How to submit an Arch Linux AUR package
 description: I recently made my first AUR package submission for Aurga Viewer.
 pubDate: 2026-07-24
+heroImage: ./hero.png
 ---
 
 I recently discovered a cheap KVM from a friend called Aurga Viewer
@@ -101,7 +102,7 @@ I came up with three options:
 3. Analyze how the application is doing the Desktop file creation using Ghidra.
    This is the option I settled with.
 
-[Image of Ghidra showing the code]
+![Image of Ghidra showing the code](./ghidra.png)
 
 In Ghidra I found that the program uses `getenv("HOME")` to get the `HOME`
 environment variable which contains the user's home location. It checks if
