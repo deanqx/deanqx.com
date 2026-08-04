@@ -1,6 +1,8 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import HeaderTitle from "./HeaderTitle.astro";
+import houseOutline from "../assets/house_outline.svg?raw";
+import houseFilled from "../assets/house_filled.svg?raw";
 import moonIcon from "../assets/moon.svg?raw";
 import sunIcon from "../assets/sun.svg?raw";
 import githubIcon from "../assets/github.svg?raw";
@@ -10,7 +12,10 @@ import githubIcon from "../assets/github.svg?raw";
   <nav>
     <HeaderTitle />
     <ul>
-      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink class="home" href="/">
+        <Fragment slot="active-icon" set:html={houseFilled} />
+        <Fragment slot="inactive-icon" set:html={houseOutline} />
+      </HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/portfolio">Portfolio</HeaderLink>
     </ul>
@@ -37,11 +42,20 @@ import githubIcon from "../assets/github.svg?raw";
   a {
     -webkit-user-select: none;
     user-select: none;
+    line-height: 1;
+  }
+  .home {
+    padding: 0.5em;
+  }
+  .home :global(svg) {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
   }
   ul {
     display: flex;
     list-style: none;
-    gap: 3px;
+    gap: 1px;
     margin: 0;
     padding: 4px;
     background-color: var(--bg-overlay);

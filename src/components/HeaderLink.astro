@@ -11,16 +11,23 @@ const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
 
 <li>
   <a href={href} class:list={[className, { active: isActive }]} {...props}>
+    {isActive ? <slot name="active-icon" /> : <slot name="inactive-icon" />}
     <slot />
   </a>
 </li>
 <style>
+  li {
+    display: flex;
+    align-items: stretch;
+  }
   a {
     color: var(--text-p);
-    display: inline-block;
+    align-items: center;
+    display: flex;
     text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 9999px;
+    padding: 0.5em 1em;
+    flex: 1;
+    border-radius: 2em;
   }
   a.active {
     color: var(--text);
