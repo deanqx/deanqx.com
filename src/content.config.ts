@@ -7,10 +7,13 @@ const blog = defineCollection({
     base: "./src/content/blog",
     pattern: "**/*.{md,mdx}",
     generateId: ({ entry }) => {
-      // Strips leading "YYYY-MM-DD_" from the filename
-      return entry
-        .replace(/^\d{4}-\d{2}-\d{2}_/, "")
-        .replace(/\.(md|mdx)$/, "");
+      return (
+        entry
+          // Strips leading "YYYY-MM-DD_" from the filename
+          .replace(/^\d{4}-\d{2}-\d{2}_/, "")
+          .replace(/index\.(md|mdx)$/, "")
+          .replace(/\.(md|mdx)$/, "")
+      );
     },
   }),
   schema: ({ image }) =>
