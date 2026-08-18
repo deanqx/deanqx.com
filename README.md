@@ -55,3 +55,58 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+# Extra
+
+## Grafana Loki Traffic Analysis
+
+All of the following examples contain a filter for local IP addresses in the
+`10.x.x.x` range.
+
+**Request log**
+
+- Visualization: `Logs`
+- Enable `Show timestamps`
+
+```logql
+{app="deanqx-com"}
+|= `http.log.access.log0`
+| json request_client_ip="request.client_ip", request_uri="request.uri", ts="ts"
+| request_client_ip != ip(`10.0.0.0/8`)
+| line_format `{{.request_client_ip}} -> {{.request_uri}}`
+```
+
+**Request count**
+
+- Visualization: `Bar gauge`
+
+```logql
+count by () (
+  count_over_time(
+    {app="deanqx-com"}
+    |= `http.log.access.log0`
+    | json request_client_ip="request.client_ip"
+    | request_client_ip != ip(`10.0.0.0/8`)
+    | __error__="" [$__interval]
+  )
+)
+```
+
+**Most requested URIs**
+
+- Visualization: `Bar gauge`
+- Set `Orientation` to `Horizontal`
+
+```logql
+topk(10,
+  sum by (request_uri) (
+    count_over_time(
+      {app="deanqx-com"}
+      |= `http.log.access.log0`
+      | json request_client_ip="request.client_ip", request_uri="request.uri"
+      | request_client_ip != ip(`10.0.0.0/8`)
+      [$__interval]
+    )
+  )
+)
+```
