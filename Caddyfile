@@ -1,0 +1,17 @@
+# After every change run: caddy fmt --overwrite
+{
+    servers {
+        trusted_proxies static private_ranges
+    }
+	auto_https off
+}
+
+:80 {
+	root * /srv
+	file_server
+
+	log {
+		output stdout
+		format json
+	}
+}

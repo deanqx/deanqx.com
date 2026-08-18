@@ -2,6 +2,15 @@
 
 My Blog and Portfolio compiled with Astro.
 
+# Develop
+
+Compile and Run with Docker ([http://localhost:8080/](http://localhost:8080/)):
+
+```sh
+sudo docker build -t deanqx-com .
+sudo docker run -p 8080:80 deanqx-com
+```
+
 ## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
