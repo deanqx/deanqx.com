@@ -25,7 +25,7 @@ jobs:
           images: ghcr.io/${{ github.repository }}
           tags: |
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
-            type=raw,value={{date 'YYYYMMDD'}}-{{sha}}
+            type=raw,value={{date 'YYYYMMDD-HHmmss'}}-{{sha}}
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
