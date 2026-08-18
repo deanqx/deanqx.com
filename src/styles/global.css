@@ -147,31 +147,33 @@ code {
     Consolas,
     Liberation Mono,
     monospace;
-  font-size: 0.85em;
+  font-size: 0.85rem;
+}
+
+/* Inline code */
+:not(pre) > code {
   padding: 0.2em 0.4em;
   background-color: var(--bg-muted);
   border-radius: 6px;
 }
 
+/* Code blocks */
 pre {
-  padding: 1.5em;
-  border-radius: 8px;
-}
-
-pre > code {
-  all: unset;
+  padding: 1em;
+  border-radius: 6px;
+  line-height: 1.45;
+  font-size: 0.85rem;
+  margin-bottom: 1em;
 }
 
 blockquote {
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--border-color);
   padding: 0 0 0 20px;
-  margin: 0;
-  font-size: 1.333em;
 }
 
 hr {
   border: none;
-  border-top: 1px solid rgb(var(--gray-light));
+  border-top: 1px solid rgb(var(--border-color));
 }
 
 @media (max-width: 768px) {

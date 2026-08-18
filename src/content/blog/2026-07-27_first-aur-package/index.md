@@ -6,7 +6,7 @@ heroImage: ./hero.webp
 ---
 
 I recently discovered a cheap KVM from a friend called Aurga Viewer
-(see [blog post](/aurga-viewer)).
+(see [blog post](/blog/aurga-viewer)).
 The desktop software can be downloaded from their Github. I preferably install
 software through my package manager, so the software can be kept easily up to
 date. I use `paru` together with the Arch User Repository (AUR) for that.
