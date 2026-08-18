@@ -95,7 +95,7 @@ I came up with three options:
    will be no desktop entry. I tried to find a "create desktop file" argument
    like `aurga-viewer --desktop-file` but without luck.
 
-2. Modify the path `~/.local/share/applications` in the binary executeable.
+2. Modify the path `~/.local/share/applications` in the binary executable.
    Problem: This is a dirty solution. The byte size of the replacement string
    has to match or else it could result in memory corruption bugs.
 
