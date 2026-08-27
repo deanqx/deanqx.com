@@ -3,6 +3,7 @@ title: How to submit an Arch Linux AUR package
 description: I recently made my first AUR package submission for Aurga Viewer.
 pubDate: 2026-07-27
 heroImage: ./hero.webp
+heroAlt: Arch user repository page showing the package
 ---
 
 I recently discovered a cheap KVM from a friend called Aurga Viewer
