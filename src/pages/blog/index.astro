@@ -13,10 +13,11 @@ const posts = (await getCollection("blog")).sort(
 
 <!doctype html>
 <html lang="en">
-  <BaseHead title="Blog" description={SITE_DESCRIPTION} />
+  <BaseHead title="Blog" description="Technical blog of deanqx" />
   <body>
     <Header />
     <main>
+      <h1>Blog</h1>
       <div class="container">
         {posts.map((post) => <PostPreview post={post} />)}
       </div>

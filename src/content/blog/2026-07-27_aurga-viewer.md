@@ -14,7 +14,7 @@ can do this exact job. The problem is these are usually very expensive.
 Projects like PiKVM are cheaper when assembled manually. A friend suggested
 something a lot simpler: the *AURGA Viewer*.
 
-# How it works
+## How it works
 
 The Aurga Viewer is a small HDMI-and-USB dongle that plugs directly into
 whatever machine you need to control. It pairs wirelessly with a client device

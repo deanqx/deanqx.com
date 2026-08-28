@@ -13,7 +13,7 @@ The version that I was using had a bug.
 
 [Bug Report at GitHub](https://github.com/openthread/ot-br-posix/issues/3429#issuecomment-5272504701)
 
-# What went wrong
+## What went wrong
 
 ![Home Assistant UI showing no border router were found](no_border_routers_found.webp)
 
@@ -27,7 +27,7 @@ After some research I found that Home Assistant is finding the Border Router
 with mDNS. This process was broken. The OTBR project had switched from using
 Avahi to a self made mDNS client. It was probably the cause of the bug.
 
-# Result
+## Result
 
 Before the bug report was reviewed I needed a working server. I tried different
 versions but none of the last few months seemed to work. So I switched to the

@@ -10,7 +10,7 @@ Home Assistant instance running in a VM, separate from Kubernetes.
 Kubernetes was the entry for all traffic (basically a reverse proxy),
 but redirecting the traffic to Home Assistant turned out to be not straightforward.
 
-# The usual way
+## The usual way
 
 The "supported" way to point a Kubernetes Service at something outside the
 cluster is to back it with a custom `EndpointSlice` that points directly at the
@@ -70,7 +70,7 @@ Output:
 
 Traffic routed through the Gateway API to an external IP specified in a custom `EndpointSlice` should successfully complete the TCP handshake and proxy the HTTP traffic, just as it does for internal pods.
 
-# The work-around
+## The work-around
 
 The work-around is to use a pod that forwards all traffic instead of pointing
 the `EndpointSlice` at the external IP directly.
@@ -120,7 +120,7 @@ A small socat container just proxies TCP traffic on to the real external address
 Since the Service now selects a normal in-cluster pod instead of a manual `EndpointSlice`,
 Cilium and Envoy handle it exactly like any other backend, and the handshake completes normally.
 
-# Maintainer feedback
+## Maintainer feedback
 
 I got a helpful response from Nick Young (@youngnick) on the issue:
 
@@ -133,7 +133,7 @@ I got a helpful response from Nick Young (@youngnick) on the issue:
 > will allow doing this by hostname explicitly (at the cost that you're accepting
 > the security risk).
 
-# Takeaway
+## Takeaway
 
 If you're trying to bridge Kubernetes Gateway API traffic to a service running
 outside the cluster, don't rely on a hand-written `EndpointSlice` pointing at an
