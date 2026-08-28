@@ -1,0 +1,131 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+// import { Image } from "astro:assets";
+// import imgFirstSetup from "../assets/timeline/2016-02-08_first_setup.webp";
+// import imgSecondSetup from "../assets/timeline/2019-05-23_second_setup.webp";
+// import imgThirdSetup from "../assets/timeline/2021-08-07_third_setup.webp";
+// import img3dGame from "../assets/timeline/2023-02-28_3d_game.webp";
+// import imgPortrait from "../assets/timeline/2025-07-26_portrait.webp";
+// import imgPcb from "../assets/timeline/2026-02-17_pcb.png";
+// import imgGoKart from "../assets/timeline/2026-02-19_go_kart.webp";
+// import imgGoKartCockpit from "../assets/timeline/2026-03-05_go_kart_cockpit.webp";
+// import imgCircuit from "../assets/timeline/2026-03-06_circuit.svg";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="Timeline" description="" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Timeline</h1>
+      <img
+        src="/timeline/2025-07-26_portrait.webp"
+        alt="Portrait of me"
+        width={300}
+      />
+      <p>February 2026</p>
+      <div class="circuit-background"></div>
+      <img src="/timeline/2026-02-19_go_kart.webp" alt="Go-Kart" width={400} />
+      <img
+        src="/timeline/2026-02-17_pcb.png"
+        alt="3D view of a Go-Kart Circuit I designed and built."
+        width={400}
+      />
+      <img
+        src="/timeline/2026-03-05_go_kart_cockpit.webp"
+        alt="Go-Kart cockpit hardware"
+        width={400}
+      />
+      <p>March 2025</p>
+      <video
+        src="/timeline/2025-03-07_first_pcb.webm"
+        type="video/mp4"
+        loading="lazy"
+        muted
+        autoplay
+        loop
+        playinline
+        width="700"></video>
+      <p>February 2024</p>
+      <video
+        src="/timeline/2024-02-03_fluffy.mp4"
+        alt="2D Game where you play a cloud and dodge air planes."
+        type="video/mp4"
+        loading="lazy"
+        muted
+        autoplay
+        loop
+        playinline
+        width="700"></video>
+      <p>February 2023</p>
+      <img
+        src="/timeline/2023-02-28_3d_game.webp"
+        alt="Working on a 3D Game"
+        width={700}
+      />
+      <p>August 2021</p>
+      <img
+        src="/timeline/2021-08-07_third_setup.webp"
+        alt="Third computer setup"
+        width={700}
+      />
+      <p>June 2019</p>
+      <video
+        src="/timeline/2019-05-27_casino.webm"
+        alt="Small virtual casino app"
+        type="video/mp4"
+        loading="lazy"
+        muted
+        autoplay
+        loop
+        playinline
+        width="700"></video>
+      <img
+        src="/timeline/2019-05-23_second_setup.webp"
+        alt="Second computer setup"
+        width={500}
+      />
+      <p>February 2016</p>
+      <img
+        src="/timeline/2016-02-08_first_setup.webp"
+        alt="First computer setup"
+        width={500}
+      />
+
+      <p>12/2024 - 01/2025 web-login-demo</p>
+      <p>06/2024 - 11/2024 Webapp für ein Altenheim:</p>
+      <p>
+        06/2023 – 06/2024 Server-Auslastungs-Tool: Entwicklung eines internen
+        Tools zur Limitierung und Überwachung der Serverlast.
+      </p>
+      <p>
+        12/2020 – 01/2021 Android-App für eine Metzgerei: Ermöglicht Kunden,
+        Informationen zu einem Produkt einzusehen.
+      </p>
+      <p>08/2020 – 05/2023 Seayon</p>
+      <p>06/2024 – heute KOWATSCH it-Service</p>
+      <p>10/2020 – 05/2021 Thalmaier Logistik und EDV</p>
+    </main>
+    <Footer />
+  </body>
+</html>
+<style>
+  main {
+    max-width: 1024px;
+  }
+  .circuit-background {
+    mask-image: url("/timeline/2026-03-06_circuit.svg");
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: currentColor;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+</style>
