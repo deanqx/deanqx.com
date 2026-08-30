@@ -9,32 +9,43 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="post-preview">
-  <a class="title" href={`/blog/${post.id}/`}>{post.data.title}</a>
-  <p class="date">
-    <FormattedDate date={post.data.pubDate} />
-  </p>
-  <p class="description">{post.data.description}</p>
-</article>
+<a class="post-preview" href={`/blog/${post.id}/`}>
+  <article>
+    <h2 class="title">{post.data.title}</h2>
+    <p class="date">
+      <FormattedDate date={post.data.pubDate} />
+    </p>
+    <p class="description">{post.data.description}</p>
+  </article>
+</a>
 <style>
   .post-preview {
-    break-inside: avoid;
     padding: 1em;
+    text-decoration: none;
+    break-inside: avoid;
+    display: block;
     margin-bottom: 0.7em;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-size) var(--border-color);
-    background-color: var(--bg-overlay);
+    border: var(--border);
+    border-top: 1px solid var(--highlight);
+    background: var(--gradient);
+    box-shadow: var(--shadow);
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .post-preview:hover {
+    background: var(--gradient-hover);
   }
   .title {
-    text-decoration: none;
+    border: none;
     font-size: 1.2em;
-    color: var(--text-p);
+    margin-top: 0.5em;
+    margin-bottom: 0;
   }
   .date {
     color: var(--text-muted);
   }
-  .title:hover {
+  .post-preview:hover .title {
     text-decoration: underline;
     color: var(--text);
   }
@@ -42,7 +53,7 @@ const { post } = Astro.props;
     color: var(--text-muted);
     margin: 0;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 720px) {
     .post-preview {
       border-radius: 0;
       border-left: none;

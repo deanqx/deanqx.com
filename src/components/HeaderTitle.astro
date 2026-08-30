@@ -10,8 +10,8 @@ import { SITE_TITLE } from "../consts";
     user-select: none;
   }
   .title {
+    font-family: "Sentient";
     font-size: 1.75rem;
-    font-weight: 700;
     text-decoration: none;
     position: relative;
   }
@@ -37,9 +37,9 @@ import { SITE_TITLE } from "../consts";
     content: "> cd /";
     font-family: "Sourcecode Pro", "Courier New", Courier, monospace;
     font-size: 0.7em;
-    text-shadow: 0 0 3px var(--secondary);
+    text-shadow: 0 0 3px var(--primary);
     position: absolute;
-    color: var(--secondary);
+    color: var(--primary);
     top: 100%;
     left: 0;
     overflow: hidden;
@@ -47,7 +47,7 @@ import { SITE_TITLE } from "../consts";
     width: 0;
   }
   .title:hover::after {
-    -webkit-text-fill-color: var(--secondary);
+    -webkit-text-fill-color: var(--primary);
     width: 0;
     animation: typing 1.2s forwards;
   }
@@ -55,8 +55,8 @@ import { SITE_TITLE } from "../consts";
     content: "";
     font-size: 0.7em;
     position: absolute;
-    box-shadow: 0 0 3px var(--secondary);
-    background-color: var(--secondary);
+    box-shadow: 0 0 3px var(--primary);
+    background-color: var(--primary);
     top: 100%;
     left: 0;
     width: 1ch;

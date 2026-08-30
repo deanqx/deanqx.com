@@ -21,7 +21,7 @@ const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
     align-items: stretch;
   }
   a {
-    color: var(--text-p);
+    color: var(--text);
     align-items: center;
     display: flex;
     text-decoration: none;
@@ -31,10 +31,10 @@ const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
   }
   a.active {
     color: var(--text);
-    background-color: var(--primary);
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow);
   }
   a:not(.active):hover {
-    color: var(--text);
-    background-color: var(--bg-hover);
+    background-color: var(--bg-light);
   }
 </style>
