@@ -31,29 +31,34 @@ const { post } = Astro.props;
     background: var(--gradient);
     box-shadow: var(--shadow);
     user-select: none;
-    -webkit-user-select: none;
   }
+
   .post-preview:hover {
     background: var(--gradient-hover);
   }
+
   .title {
     border: none;
     font-size: 1.2em;
     margin-top: 0.5em;
     margin-bottom: 0;
   }
+
   .date {
     color: var(--text-muted);
   }
+
   .post-preview:hover .title {
     text-decoration: underline;
     color: var(--text);
   }
+
   .description {
     color: var(--text-muted);
     margin: 0;
   }
-  @media (max-width: 720px) {
+
+  @media (width <= 720px) {
     .post-preview {
       border-radius: 0;
       border-left: none;

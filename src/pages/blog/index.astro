@@ -30,13 +30,16 @@ const posts = (await getCollection("blog")).sort(
     columns: 2;
     column-gap: 0.7em;
   }
-  @media (max-width: 720px) {
+
+  @media (width <= 720px) {
     main {
       padding: 0;
     }
+
     h1 {
       margin-left: 1rem;
     }
+
     .posts {
       columns: 1;
     }
