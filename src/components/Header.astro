@@ -34,19 +34,22 @@ import githubIcon from "../assets/github.svg?raw";
   header {
     padding: 0.7em 1em;
   }
+
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   a {
-    -webkit-user-select: none;
     user-select: none;
     line-height: 1;
   }
+
   .home {
     padding: 0.5rem;
   }
+
   ul {
     display: flex;
     list-style: none;
@@ -59,26 +62,37 @@ import githubIcon from "../assets/github.svg?raw";
     background: var(--gradient);
     box-shadow: var(--shadow);
   }
+
   .nav-actions,
   .nav-actions a {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
+
   .icon-btn {
     color: var(--text);
     cursor: pointer;
     width: 2.5rem;
     height: 2.5rem;
   }
+
   .icon-btn:hover {
     color: var(--text);
   }
-  .moon-icon,
+
+  .moon-icon {
+    display: block;
+  }
+
+  .sun-icon {
+    display: none;
+  }
+
   :root.dark .sun-icon {
     display: block;
   }
-  .sun-icon,
+
   :root.dark .moon-icon {
     display: none;
   }

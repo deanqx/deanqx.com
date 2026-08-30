@@ -6,15 +6,16 @@ import { SITE_TITLE } from "../consts";
 <style>
   a {
     color: var(--text);
-    -webkit-user-select: none;
     user-select: none;
   }
+
   .title {
-    font-family: "Sentient";
+    font-family: var(--font-serif);
     font-size: 1.75rem;
     text-decoration: none;
     position: relative;
   }
+
   .title:hover {
     background: linear-gradient(
       135deg,
@@ -23,16 +24,17 @@ import { SITE_TITLE } from "../consts";
       var(--primary)
     );
     background-size: 200% auto;
-    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s linear infinite;
   }
+
   @keyframes shine {
     to {
       background-position: 200% center;
     }
   }
+
   .title::after {
     content: "> cd /";
     font-family: "Sourcecode Pro", "Courier New", Courier, monospace;
@@ -46,11 +48,13 @@ import { SITE_TITLE } from "../consts";
     white-space: nowrap;
     width: 0;
   }
+
   .title:hover::after {
     -webkit-text-fill-color: var(--primary);
     width: 0;
     animation: typing 1.2s forwards;
   }
+
   .title:hover::before {
     content: "";
     font-size: 0.7em;
@@ -62,52 +66,63 @@ import { SITE_TITLE } from "../consts";
     width: 1ch;
     height: 1lh;
     animation:
-      moveCursor 1.2s forwards,
+      move-cursor 1.2s forwards,
       blink 1s steps(1) 1.2s infinite;
   }
+
   @keyframes blink {
     50% {
       opacity: 0;
     }
   }
+
   @keyframes typing {
     0%,
     39% {
       width: 2ch;
     }
+
     40%,
     59% {
       width: 3ch;
     }
+
     60%,
     69% {
       width: 4ch;
     }
+
     70%,
     99% {
       width: 5ch;
     }
+
     100% {
       width: 6ch;
     }
   }
-  @keyframes moveCursor {
+
+  @keyframes move-cursor {
     0%,
     39% {
       transform: translateX(2ch);
     }
+
     40%,
     59% {
       transform: translateX(3ch);
     }
+
     60%,
     69% {
       transform: translateX(4ch);
     }
+
     70%,
     99% {
       transform: translateX(5ch);
     }
+
     100% {
       transform: translateX(6ch);
     }

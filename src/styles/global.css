@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Sentient";
+  font-family: Sentient;
   src: url("/fonts/Sentient-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -12,63 +12,53 @@
 }
 
 :root {
-  --bg-dark: hsl(216 33% 90%);
-  --bg: hsl(216 74% 96%);
-  --bg-light: hsl(216 100% 100%);
-  --text: hsl(218 70% 5%);
-  --text-muted: hsl(216 18% 29%);
-  --highlight: hsl(216 100% 100%);
-  --border-color: hsl(216 12% 52%);
-  --border-muted: hsl(216 16% 64%);
-  --primary: hsl(216 57% 31%);
-  --secondary: hsl(42 100% 15%);
-  --danger: hsl(9 21% 41%);
-  --warning: hsl(52 23% 34%);
-  --success: hsl(147 19% 36%);
-  --info: hsl(217 22% 41%);
+  --bg-dark: hsl(216deg 33% 90%);
+  --bg: hsl(216deg 74% 96%);
+  --bg-light: hsl(216deg 100% 100%);
+  --text: hsl(218deg 70% 5%);
+  --text-muted: hsl(216deg 18% 29%);
+  --highlight: hsl(216deg 100% 100%);
+  --border-color: hsl(216deg 12% 52%);
+  --border-muted: hsl(216deg 16% 64%);
+  --primary: hsl(216deg 57% 31%);
   --border: 1px solid var(--bg);
-  --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0 4px 4px hsla(0, 0%, 0%, 0.15);
+  --shadow: 0px 2px 2px hsl(0deg 0% 0% / 7%), 0 4px 4px hsl(0deg 0% 0% / 15%);
   --gradient: linear-gradient(0deg, var(--bg) 70%, var(--bg-light));
   --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+  --font-sans:
+    "Mona Sans VF", -apple-system, "BlinkMacSystemFont", "Segoe UI",
+    "Noto Sans", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --font-serif:
+    "Sentient", "Mona Sans VF", -apple-system, "BlinkMacSystemFont", "Segoe UI",
+    "Noto Sans", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --font-mono:
+    "Monaspace Neon", ui-monospace, "SFMono-Regular", "SF Mono", "Menlo",
+    "Consolas", "Liberation Mono", monospace;
 }
 
 :root.dark {
-  --bg-dark: hsl(222 61% 2%);
-  --bg: hsl(217 40% 5%);
-  --bg-light: hsl(216 24% 9%);
-  --text: hsl(216 100% 97%);
-  --text-muted: hsl(216 21% 71%);
-  --highlight: hsl(216 14% 40%);
-  --border-color: hsl(216 18% 29%);
-  --border-muted: hsl(216 25% 19%);
-  --primary: hsl(216 78% 74%);
-  --secondary: hsl(37 56% 61%);
-  --danger: hsl(9 26% 64%);
-  --warning: hsl(52 19% 57%);
-  --success: hsl(146 17% 59%);
-  --info: hsl(217 28% 65%);
+  --bg-dark: hsl(222deg 61% 2%);
+  --bg: hsl(217deg 40% 5%);
+  --bg-light: hsl(216deg 24% 9%);
+  --text: hsl(216deg 100% 97%);
+  --text-muted: hsl(216deg 21% 71%);
+  --highlight: hsl(216deg 14% 40%);
+  --border-color: hsl(216deg 18% 29%);
+  --border-muted: hsl(216deg 25% 19%);
+  --primary: hsl(216deg 78% 74%);
   --border: 1px solid var(--border-color);
 }
 
 body {
-  font-family:
-    "Mona Sans VF",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Noto Sans",
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji";
+  font-family: var(--font-sans);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   text-align: left;
   background: var(--bg-dark);
   background-size: 100% 600px;
-  word-wrap: break-word;
   overflow-wrap: break-word;
   color: var(--text);
   font-size: 16px;
@@ -92,8 +82,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Sentient";
-  margin: 0 0 1rem 0;
+  font-family: var(--font-serif);
+  margin: 0 0 1rem;
   color: var(--text);
   line-height: 1;
 }
@@ -161,15 +151,7 @@ img {
 }
 
 code {
-  font-family:
-    "Monaspace Neon",
-    ui-monospace,
-    SFMono-Regular,
-    SF Mono,
-    Menlo,
-    Consolas,
-    Liberation Mono,
-    monospace;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
 }
 
@@ -199,13 +181,13 @@ hr {
   border-top: 1px solid rgb(var(--border-color));
 }
 
-@media (max-width: 720px) {
+@media (width <= 720px) {
   .desktop-only {
     display: none !important;
   }
 }
 
-@media (min-width: 721px) {
+@media (width >= 721px) {
   .mobile-only {
     display: none !important;
   }
