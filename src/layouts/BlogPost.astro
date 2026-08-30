@@ -21,6 +21,24 @@ const { title, description, pubDate, updatedDate, heroImage, heroAlt } =
         max-width: 100%;
         margin: 0;
       }
+      header {
+        margin-bottom: 1em;
+        padding: 1em 0;
+        line-height: 1;
+        border-bottom: 1px solid var(--border-color);
+      }
+      h1 {
+        margin: 0 0 0.3em 0;
+      }
+      .description {
+        color: var(--text-muted);
+      }
+      .date {
+        color: var(--text-muted);
+        margin-bottom: 0.5em;
+        display: block;
+        gap: 0.5rem;
+      }
       .hero-image {
         width: 100%;
       }
@@ -28,30 +46,14 @@ const { title, description, pubDate, updatedDate, heroImage, heroAlt } =
         display: block;
         margin: 0 auto;
         border-radius: 12px;
-        box-shadow: var(--box-shadow);
+        box-shadow: var(--shadow);
       }
-      .prose {
+      article {
         width: 720px;
         max-width: calc(100% - 2em);
         margin: auto;
         padding: 1em;
-        color: var(--text-p);
-      }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.3em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: var(--text-p);
-      }
-      .last-updated-on {
-        font-style: italic;
+        color: var(--text);
       }
     </style>
   </head>
@@ -60,26 +62,26 @@ const { title, description, pubDate, updatedDate, heroImage, heroAlt } =
     <Header />
     <main>
       <article>
-        <div class="prose">
+        <header>
           <div class="hero-image">
             {heroImage && <Image src={heroImage} alt={heroAlt} />}
           </div>
-          <div class="title">
-            <h1>{title}</h1>
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <hr />
-          </div>
-          <slot />
-        </div>
+          <h1>{title}</h1>
+          <p class="description">
+            {description}
+          </p>
+          <p class="date">
+            <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <span class="updated-on">
+                  &nbsp;(Updated on <FormattedDate date={updatedDate} />)
+                </span>
+              )
+            }
+          </p>
+        </header>
+        <slot />
       </article>
     </main>
     <Footer />

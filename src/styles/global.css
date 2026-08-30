@@ -1,31 +1,53 @@
+@font-face {
+  font-family: "Sentient";
+  src: url("/fonts/Sentient-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   padding: 0;
   margin: 0;
 }
 
 :root {
-  --primary: oklch(0.7 0.1208 278.81);
-  --secondary: oklch(0.7 0.1436 145.28);
-  --bg-muted: #d0d0d0;
-  --bg: #fdfdfd;
-  --bg-hover: #f0f0f0;
-  --bg-overlay: #fff;
-  --text: #0c0c0c;
-  --text-muted: #808080;
-  --border-color: #d6d6d6;
-  --shadow-size: 0px 3px 10px 0px;
+  --bg-dark: hsl(216 33% 90%);
+  --bg: hsl(216 74% 96%);
+  --bg-light: hsl(216 100% 100%);
+  --text: hsl(218 70% 5%);
+  --text-muted: hsl(216 18% 29%);
+  --highlight: hsl(216 100% 100%);
+  --border-color: hsl(216 12% 52%);
+  --border-muted: hsl(216 16% 64%);
+  --primary: hsl(216 57% 31%);
+  --secondary: hsl(42 100% 15%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+  --border: 1px solid var(--bg);
+  --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0 4px 4px hsla(0, 0%, 0%, 0.15);
+  --gradient: linear-gradient(0deg, var(--bg) 70%, var(--bg-light));
+  --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
 }
 
 :root.dark {
-  --bg-muted: #363636;
-  --bg: #1a1a1a;
-  --bg-hover: #0f0f0f;
-  --bg-overlay: #202020;
-  --text: #fcfcfc;
-  --text-p: #f9f9f9;
-  --text-muted: #c0c0c0;
-  --border-color: #707070;
-  --shadow-size: 0;
+  --bg-dark: hsl(222 61% 2%);
+  --bg: hsl(217 40% 5%);
+  --bg-light: hsl(216 24% 9%);
+  --text: hsl(216 100% 97%);
+  --text-muted: hsl(216 21% 71%);
+  --highlight: hsl(216 14% 40%);
+  --border-color: hsl(216 18% 29%);
+  --border-muted: hsl(216 25% 19%);
+  --primary: hsl(216 78% 74%);
+  --secondary: hsl(37 56% 61%);
+  --danger: hsl(9 26% 64%);
+  --warning: hsl(52 19% 57%);
+  --success: hsl(146 17% 59%);
+  --info: hsl(217 28% 65%);
+  --border: 1px solid var(--border-color);
 }
 
 body {
@@ -44,7 +66,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   text-align: left;
-  background: var(--bg);
+  background: var(--bg-dark);
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -61,7 +83,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
-  padding: 1em;
+  padding: 1rem;
 }
 
 h1,
@@ -70,6 +92,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Sentient";
   margin: 0 0 1rem 0;
   color: var(--text);
   line-height: 1;
@@ -153,7 +176,7 @@ code {
 /* Inline code */
 :not(pre) > code {
   padding: 0.2em 0.4em;
-  background-color: var(--bg-muted);
+  background-color: var(--bg-light);
   border-radius: 6px;
 }
 
@@ -167,7 +190,7 @@ pre {
 }
 
 blockquote {
-  border-left: 4px solid var(--border-color);
+  border-left: 4px solid var(--border);
   padding: 0 0 0 20px;
 }
 
@@ -176,13 +199,13 @@ hr {
   border-top: 1px solid rgb(var(--border-color));
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .desktop-only {
     display: none !important;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 721px) {
   .mobile-only {
     display: none !important;
   }

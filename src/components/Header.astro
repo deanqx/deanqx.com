@@ -45,23 +45,19 @@ import githubIcon from "../assets/github.svg?raw";
     line-height: 1;
   }
   .home {
-    padding: 0.5em;
-  }
-  .home :global(svg) {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
+    padding: 0.5rem;
   }
   ul {
     display: flex;
     list-style: none;
     gap: 1px;
     margin: 0;
-    padding: 4px;
-    background-color: var(--bg-overlay);
+    padding: 0.25rem;
     border-radius: 24px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-size) var(--border-color);
+    border: var(--border);
+    border-top: 1px solid var(--highlight);
+    background: var(--gradient);
+    box-shadow: var(--shadow);
   }
   .nav-actions,
   .nav-actions a {
@@ -70,7 +66,7 @@ import githubIcon from "../assets/github.svg?raw";
     gap: 1rem;
   }
   .icon-btn {
-    color: var(--text-p);
+    color: var(--text);
     cursor: pointer;
     width: 2.5rem;
     height: 2.5rem;
