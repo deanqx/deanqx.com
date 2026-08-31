@@ -56,6 +56,29 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## Staging to Production
+
+Every push to the `main` branch triggers a package build in the format:
+
+```
+YYYYMMDD-HHmmss-GIT_SHA
+20260828-104308-a2b2483
+```
+
+The `main` branch is used for public testing purposes. A few friends have access
+to the private staging server where the `main` branch is hosted. They give
+feedback and then a production package is released.
+
+Production packages get a [semantic version](https://semver.org/)
+clearly recognizable by the `v` at the start.
+
+Example workflow:
+
+```sh
+git tag v0.1.0
+git push --tags
+```
+
 # Extra
 
 ## Grafana Loki Traffic Analysis
