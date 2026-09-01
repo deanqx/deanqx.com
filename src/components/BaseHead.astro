@@ -11,9 +11,13 @@ interface Props {
   image?: ImageMetadata;
 }
 
+const { title, description, image } = Astro.props;
+
+// Ensure absolute URL for canonical link
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description } = Astro.props;
+const imagePath = image?.src ?? "/favicon-256x256.png";
+const ogImageUrl = new URL(imagePath, Astro.site);
 ---
 
 <!-- Global Metadata -->
@@ -39,15 +43,20 @@ const { title, description } = Astro.props;
 <title>{title}</title>
 <meta name="description" content={description} />
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph / Facebook / Discord / iMessage -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<!-- <meta property="og:image" content={new URL(image.src, Astro.url)} /> -->
+<meta property="og:image" content={ogImageUrl} />
 
-<!-- Twitter -->
+<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+
 <script is:inline>
   function toggleTheme(e) {
     // Stop link navigation if called from <a>
