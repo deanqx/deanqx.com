@@ -23,6 +23,7 @@
   --primary: hsl(216deg 57% 31%);
   --border: 1px solid var(--bg);
   --shadow: 0px 2px 2px hsl(0deg 0% 0% / 7%), 0 4px 4px hsl(0deg 0% 0% / 15%);
+  --shadow-selected: var(--shadow);
   --gradient: linear-gradient(0deg, var(--bg) 70%, var(--bg-light));
   --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
   --font-sans:
@@ -49,6 +50,9 @@
   --border-muted: hsl(216deg 25% 19%);
   --primary: hsl(216deg 78% 74%);
   --border: 1px solid var(--border-color);
+  --shadow: none;
+  --shadow-selected:
+    inset 0 1px 2px var(--highlight), 0 1px 2px #0003, 0 2px 4px #0001;
 }
 
 body {
