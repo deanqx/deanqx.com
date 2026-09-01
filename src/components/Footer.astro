@@ -5,12 +5,12 @@ const today = new Date();
 <footer>
   <ul>
     <li>
-      <a class="mobile-only set-dark-mode" onclick="toggleTheme()">
+      <button class="a mobile-only set-dark-mode" onclick="toggleTheme()">
         Use darkmode
-      </a>
-      <a class="mobile-only set-light-mode" onclick="toggleTheme()">
+      </button>
+      <button class="a mobile-only set-light-mode" onclick="toggleTheme()">
         Use lightmode
-      </a>
+      </button>
     </li>
     <li>
       <a href="https://github.com/deanqx" target="_blank"> Github </a>
@@ -38,11 +38,12 @@ const today = new Date();
     padding: 0;
   }
 
+  button,
   a {
     padding: 0 1em;
   }
 
-  ul li:not(:last-child) a {
+  ul li:not(:last-child) :is(a, button) {
     /* Vertical line */
     border-right: 1px solid var(--text-muted);
   }

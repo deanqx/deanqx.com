@@ -12,7 +12,7 @@ import githubIcon from "../assets/github.svg?raw";
   <nav>
     <HeaderTitle />
     <ul>
-      <HeaderLink class="home" href="/">
+      <HeaderLink class="home" aria-label="Home" href="/">
         <Fragment slot="active-icon" set:html={houseFilled} />
         <Fragment slot="inactive-icon" set:html={houseOutline} />
       </HeaderLink>
@@ -20,11 +20,20 @@ import githubIcon from "../assets/github.svg?raw";
       <HeaderLink href="/timeline">Timeline</HeaderLink>
     </ul>
     <div class="desktop-only nav-actions">
-      <div class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <button
+        class="icon-btn"
+        onclick="toggleTheme()"
+        aria-label="Toggle theme"
+      >
         <span class="moon-icon"><Fragment set:html={moonIcon} /></span>
         <span class="sun-icon"><Fragment set:html={sunIcon} /></span>
-      </div>
-      <a class="icon-btn" href="https://github.com/deanqx" target="_blank">
+      </button>
+      <a
+        class="icon-btn"
+        aria-label="deanqx at GitHub"
+        href="https://github.com/deanqx"
+        target="_blank"
+      >
         <Fragment set:html={githubIcon} />
       </a>
     </div>
