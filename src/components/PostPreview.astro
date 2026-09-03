@@ -30,6 +30,7 @@ const { post } = Astro.props;
     background: var(--bg-mid);
     box-shadow: var(--shadow);
     user-select: none;
+    transition: transform 0.1s ease-in-out;
   }
 
   .title {
@@ -43,9 +44,12 @@ const { post } = Astro.props;
     color: var(--text-muted);
   }
 
+  .post-preview:hover {
+    transform: translateY(-3px);
+  }
+
   .post-preview:hover .title {
     text-decoration: underline;
-    color: var(--text);
   }
 
   .description {

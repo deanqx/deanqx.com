@@ -17,12 +17,7 @@
 
   /* Definitions */
   --border: 1px solid var(--border-color);
-  --shadow: inset 0 1px 2px #fff3, 0 1px 2px #0003, 0 2px 4px #0001;
-  --hover-gradient: linear-gradient(
-    10deg,
-    var(--hover-color) 20%,
-    var(--bg-mid)
-  );
+  --shadow: inset 0 1px 2px #fff3, 0 2px 2px #0003, 0 3px 6px #0001;
   --font-sans:
     "Mona Sans VF", -apple-system, "BlinkMacSystemFont", "Segoe UI",
     "Noto Sans", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
@@ -36,10 +31,10 @@
   --bg-hover: oklch(22% 0.01 259deg);
   --bg: oklch(20% 0.01 259deg);
   --bg-mid: oklch(25% 0.01 259deg);
-  --bg-top: oklch(30% 0.01 259deg);
+  --bg-top: oklch(35% 0.01 259deg);
   --code-color: oklch(30% 0.01 259deg);
   --inline-code-color: var(--code-color);
-  --hover-color: oklch(35% 0.015 259deg);
+  --hover-color: oklch(40% 0.015 259deg);
   --border-color: oklch(40% 0.01 259deg);
   --text: #eee;
   --text-muted: oklch(80% 0.03 259deg);
