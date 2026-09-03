@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import ExternalLink from "../components/ExternalLink.astro";
 // import { Image } from "astro:assets";
 // import imgFirstSetup from "../assets/timeline/2016-02-08_first_setup.webp";
 // import imgSecondSetup from "../assets/timeline/2019-05-23_second_setup.webp";
@@ -28,20 +29,38 @@ import Header from "../components/Header.astro";
         alt="Portrait of me"
         width={300}
       />
-      <p>February 2026</p>
-      <div class="circuit-background"></div>
-      <img src="/timeline/2026-02-19_go_kart.webp" alt="Go-Kart" width={400} />
-      <img
-        src="/timeline/2026-02-17_pcb.png"
-        alt="3D view of a Go-Kart Circuit I designed and built."
-        width={400}
-      />
-      <img
-        src="/timeline/2026-03-05_go_kart_cockpit.webp"
-        alt="Go-Kart cockpit hardware"
-        width={400}
-      />
-      <p>March 2025</p>
+      <p>Hello</p>
+      <h2>June 2026</h2>
+      <p>Server and this Website</p>
+      <div style="position: relative;">
+        <h2>February 2026</h2>
+        <div class="circuit-background"></div>
+        <div class="image-grid">
+          <img
+            style="grid-row: 1;"
+            src="/timeline/2026-03-05_go_kart_cockpit.webp"
+            alt="Go-Kart cockpit hardware"
+            width={400}
+          />
+          <img
+            style="grid-row: 2;"
+            src="/timeline/2026-02-17_pcb.png"
+            alt="3D view of a Go-Kart Circuit I designed and built."
+            width={400}
+          />
+          <img
+            style="grid-row: span 2;"
+            src="/timeline/2026-02-19_go_kart.webp"
+            alt="Go-Kart"
+            width={400}
+          />
+        </div>
+      </div>
+      <p>text</p>
+      <ExternalLink href="https://github.com/deanqx/go-kart">
+        go-kart
+      </ExternalLink>
+      <h2>March 2025</h2>
       <video
         src="/timeline/2025-03-07_first_pcb.webm"
         type="video/mp4"
@@ -51,7 +70,8 @@ import Header from "../components/Header.astro";
         loop
         playinline
         width="700"></video>
-      <p>February 2024</p>
+      <p>text</p>
+      <h2>February 2024</h2>
       <video
         src="/timeline/2024-02-03_fluffy.mp4"
         alt="2D Game where you play a cloud and dodge air planes."
@@ -62,40 +82,97 @@ import Header from "../components/Header.astro";
         loop
         playinline
         width="700"></video>
-      <p>February 2023</p>
+      <ExternalLink href="https://github.com/deanqx/Fluffy">
+        Fluffy
+      </ExternalLink>
+      <h2>February 2023</h2>
       <img
         src="/timeline/2023-02-28_3d_game.webp"
         alt="Working on a 3D Game"
         width={700}
       />
-      <p>August 2021</p>
+      <ExternalLink href="https://github.com/deanqx/Shadow-Intruder">
+        Shadow-Intruder
+      </ExternalLink>
+      <h2>August 2021</h2>
       <img
         src="/timeline/2021-08-07_third_setup.webp"
         alt="Third computer setup"
         width={700}
       />
-      <p>June 2019</p>
-      <video
-        src="/timeline/2019-05-27_casino.webm"
-        alt="Small virtual casino app"
-        type="video/mp4"
-        loading="lazy"
-        muted
-        autoplay
-        loop
-        playinline
-        width="700"></video>
+      New equipment and new projects. I loved and still love the YouTube Videos about
+      AI learning to play a game. So I wanted to learn how AI works. But I didn't
+      wanted to just use an existing library -- I wanted to know it worked behind
+      the scenes. After all this wasn't a project that needed to be deployed. Note
+      that I started it before the AI hype with the ChatGPT 3 release in 2022. At
+      this time I also learned about Git and GitHub. So I built the C++ library called
+      <ExternalLink href="https://github.com/deanqx/Seayon">Seayon</ExternalLink
+      > only following the YouTube series of <ExternalLink
+        href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"
+        >3Blue1Brown on Neural Networks</ExternalLink
+      >. My goal was to use it as a trading AI. Spoiler: you can't beat
+      Wallstreet with a plain Neural Network. In the end I still learned a lot
+      and improved my math grades.
+      <h2>June 2019</h2>
       <img
         src="/timeline/2019-05-23_second_setup.webp"
         alt="Second computer setup"
         width={500}
       />
-      <p>February 2016</p>
+      <p>
+        The Minecraft server wasn't really as popular as I hoped, so I abandoned
+        the server as well as my YouTube Channel in 2018. Surprisingly a few
+        friends actually starting playing a lot on it in 2020 when I already
+        lost the interest. In 2019 I got an actual desk and started learning
+        about Java, C# and Desktop App development. I liked the idea of
+        cryptocurrency so I built a digital bank (<ExternalLink
+          href="https://github.com/deanqx/BankDemo"
+          >BankDemo at GitHub
+        </ExternalLink>) with a Server-Client system without encryption. The
+        tutorial I followed was about a chat program using Java. After that I
+        wanted to look into C# which I did by building a Steam clone (<ExternalLink
+          href="https://github.com/deanqx/ArcadeHub"
+        >
+          ArcadeHub at GitHub
+        </ExternalLink>).
+      </p>
+      <h2>2017</h2>
+      <p>
+        Published a <ExternalLink
+          href="https://www.youtube.com/watch?v=pCqS7dqVr1Q"
+          >YouTube video</ExternalLink
+        > about the Minecraft server. I was 12 years old at this point.
+      </p>
+      <h2>February 2016</h2>
       <img
         src="/timeline/2016-02-08_first_setup.webp"
         alt="First computer setup"
         width={500}
       />
+      <p>
+        Starting from 2014, I was a big Minecraft fan. About 2016 came the idea
+        to build my own Minecraft server. My advantage was that my fathers runs
+        a technical company and had a Windows server for me to use.
+      </p>
+      <h2>before 2016</h2>
+      <p>
+        My first contact with things outside the normal user space started with
+        a video on YouTube about "hacking" a Wifi password with the Windows
+        command line. It wasn't about actual hacking but rather reading the
+        password of the stored Wifis. Afterall that didn't really matter because
+        it successfully showed me my Wifi password and I was convinced
+        <code>cmd.exe</code> was some kind of hacker tool. I wanted to learn more
+        so I searched on YouTube and found this series: <ExternalLink
+          href="https://www.youtube.com/watch?v=CvNvUlQ6Knw"
+        >
+          CMD Tutorial Deutsch von ANSPictures (2010)
+        </ExternalLink>
+      </p>
+      <h2>November 2014</h2>
+      <p>
+        Start of YouTube Channel: Recorded gaming videos with Phone and later
+        learned about on system recording with OBS.
+      </p>
 
       <p>12/2024 - 01/2025 web-login-demo</p>
       <p>06/2024 - 11/2024 Webapp für ein Altenheim:</p>
@@ -112,21 +189,42 @@ import Header from "../components/Header.astro";
       <p>10/2020 – 05/2021 Thalmaier Logistik und EDV</p>
     </main>
     <Footer />
+
+    <style>
+      main {
+        max-width: 1024px;
+      }
+
+      .circuit-background {
+        mask-image: url("/timeline/2026-03-06_circuit.svg");
+        mask-size: contain;
+        mask-position: top;
+        mask-repeat: no-repeat;
+        background-color: currentcolor;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        margin-top: 1lh;
+      }
+
+      .image-grid {
+        margin-top: 5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 2em;
+      }
+
+      .image-grid img {
+        height: 100%;
+      }
+
+      @media (width <= 720px) {
+        .image-grid {
+          grid-template-columns: 1fr;
+          gap: 0.5em;
+        }
+      }
+    </style>
   </body>
 </html>
-<style>
-  main {
-    max-width: 1024px;
-  }
-
-  .circuit-background {
-    mask-image: url("/timeline/2026-03-06_circuit.svg");
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    background-color: currentcolor;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-  }
-</style>
