@@ -33,11 +33,11 @@ const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
 
   a.active {
     color: var(--text);
-    background-color: var(--bg-light);
-    box-shadow: var(--shadow-selected);
+    background-color: var(--bg-top);
+    box-shadow: var(--shadow);
   }
 
   a:not(.active):hover {
-    background-color: var(--bg-light);
+    background: var(--hover-gradient);
   }
 </style>

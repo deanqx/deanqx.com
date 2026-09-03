@@ -1,44 +1,24 @@
 ---
-import { SITE_TITLE } from "../consts";
+import Logo from "../assets/deanqx-kihim.svg";
 ---
 
-<a class="title" href="/">{SITE_TITLE}</a>
+<a class="title" aria-label="Logo to Home page" href="/"><Logo /></a>
 <style>
-  a {
-    color: var(--text);
-    user-select: none;
-  }
-
   .title {
-    font-family: var(--font-serif);
-    font-size: 1.75rem;
-    text-decoration: none;
     position: relative;
+    color: var(--text);
+    display: inline-flex;
   }
 
-  .title:hover {
-    background: linear-gradient(
-      135deg,
-      var(--primary),
-      var(--text),
-      var(--primary)
-    );
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s linear infinite;
-  }
-
-  @keyframes shine {
-    to {
-      background-position: 200% center;
-    }
+  .title svg {
+    height: 2em;
+    width: auto;
   }
 
   .title::after {
     content: "> cd /";
-    font-family: "Sourcecode Pro", "Courier New", Courier, monospace;
-    font-size: 0.7em;
+    font-family: var(--font-mono);
+    font-size: 1rem;
     text-shadow: 0 0 3px var(--primary);
     position: absolute;
     color: var(--primary);
@@ -57,7 +37,7 @@ import { SITE_TITLE } from "../consts";
 
   .title:hover::before {
     content: "";
-    font-size: 0.7em;
+    font-size: 1em;
     position: absolute;
     box-shadow: 0 0 3px var(--primary);
     background-color: var(--primary);

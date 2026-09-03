@@ -1,37 +1,28 @@
-@font-face {
-  font-family: Sentient;
-  src: url("/fonts/Sentient-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 * {
   padding: 0;
   margin: 0;
 }
 
 :root {
-  --bg-dark: hsl(216deg 33% 90%);
-  --bg: hsl(216deg 74% 96%);
-  --bg-light: hsl(216deg 100% 100%);
-  --text: hsl(218deg 70% 5%);
-  --text-muted: hsl(216deg 18% 29%);
-  --highlight: hsl(216deg 100% 100%);
-  --border-color: hsl(216deg 12% 52%);
-  --border-muted: hsl(216deg 16% 64%);
-  --primary: hsl(216deg 57% 31%);
-  --border: 1px solid var(--bg);
-  --shadow: 0px 2px 2px hsl(0deg 0% 0% / 7%), 0 4px 4px hsl(0deg 0% 0% / 15%);
-  --shadow-selected: var(--shadow);
-  --gradient: linear-gradient(0deg, var(--bg) 70%, var(--bg-light));
-  --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+  --bg: oklch(96% 0.01 259deg);
+  --bg-mid: oklch(98% 0.01 259deg);
+  --bg-top: oklch(100% 0.01 259deg);
+  --hover-color: oklch(92% 0.015 259deg);
+  --border-color: var(--bg-mid);
+  --text: #111;
+  --text-muted: oklch(40% 0.05 259deg);
+  --primary: oklch(40% 0.2 259deg);
+
+  /* Definitions */
+  --border: 1px solid var(--border-color);
+  --shadow: inset 0 1px 2px #fff3, 0 1px 2px #0003, 0 2px 4px #0001;
+  --hover-gradient: linear-gradient(
+    10deg,
+    var(--hover-color) 20%,
+    var(--bg-mid)
+  );
   --font-sans:
     "Mona Sans VF", -apple-system, "BlinkMacSystemFont", "Segoe UI",
-    "Noto Sans", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji";
-  --font-serif:
-    "Sentient", "Mona Sans VF", -apple-system, "BlinkMacSystemFont", "Segoe UI",
     "Noto Sans", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji";
   --font-mono:
@@ -40,19 +31,15 @@
 }
 
 :root.dark {
-  --bg-dark: hsl(222deg 61% 2%);
-  --bg: hsl(217deg 40% 5%);
-  --bg-light: hsl(216deg 24% 9%);
-  --text: hsl(216deg 100% 97%);
-  --text-muted: hsl(216deg 21% 71%);
-  --highlight: hsl(216deg 14% 40%);
-  --border-color: hsl(216deg 18% 29%);
-  --border-muted: hsl(216deg 25% 19%);
-  --primary: hsl(216deg 78% 74%);
-  --border: 1px solid var(--border-color);
-  --shadow: none;
-  --shadow-selected:
-    inset 0 1px 2px var(--highlight), 0 1px 2px #0003, 0 2px 4px #0001;
+  --bg-hover: oklch(22% 0.01 259deg);
+  --bg: oklch(20% 0.01 259deg);
+  --bg-mid: oklch(25% 0.01 259deg);
+  --bg-top: oklch(30% 0.01 259deg);
+  --hover-color: oklch(35% 0.015 259deg);
+  --border-color: oklch(40% 0.01 259deg);
+  --text: #eee;
+  --text-muted: oklch(80% 0.03 259deg);
+  --primary: oklch(80% 0.2 259deg);
 }
 
 body {
@@ -61,7 +48,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   text-align: left;
-  background: var(--bg-dark);
+  background: var(--bg);
   background-size: 100% 600px;
   overflow-wrap: break-word;
   color: var(--text);
@@ -86,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   margin: 0 0 1rem;
   color: var(--text);
   line-height: 1;
@@ -170,7 +157,7 @@ code {
 /* Inline code */
 :not(pre) > code {
   padding: 0.2em 0.4em;
-  background-color: var(--bg-light);
+  background-color: var(--fg-light);
   border-radius: 6px;
 }
 
