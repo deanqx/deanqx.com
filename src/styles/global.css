@@ -150,6 +150,7 @@ table {
   width: 100%;
 }
 
+video,
 img {
   max-width: 100%;
   height: auto;

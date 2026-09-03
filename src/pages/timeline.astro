@@ -2,16 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-// import { Image } from "astro:assets";
-// import imgFirstSetup from "../assets/timeline/2016-02-08_first_setup.webp";
-// import imgSecondSetup from "../assets/timeline/2019-05-23_second_setup.webp";
-// import imgThirdSetup from "../assets/timeline/2021-08-07_third_setup.webp";
-// import img3dGame from "../assets/timeline/2023-02-28_3d_game.webp";
-// import imgPortrait from "../assets/timeline/2025-07-26_portrait.webp";
-// import imgPcb from "../assets/timeline/2026-02-17_pcb.png";
-// import imgGoKart from "../assets/timeline/2026-02-19_go_kart.webp";
-// import imgGoKartCockpit from "../assets/timeline/2026-03-05_go_kart_cockpit.webp";
-// import imgCircuit from "../assets/timeline/2026-03-06_circuit.svg";
+import ExternalLink from "../components/ExternalLink.astro";
 ---
 
 <!doctype html>
@@ -28,20 +19,53 @@ import Header from "../components/Header.astro";
         alt="Portrait of me"
         width={300}
       />
-      <p>February 2026</p>
-      <div class="circuit-background"></div>
-      <img src="/timeline/2026-02-19_go_kart.webp" alt="Go-Kart" width={400} />
-      <img
-        src="/timeline/2026-02-17_pcb.png"
-        alt="3D view of a Go-Kart Circuit I designed and built."
-        width={400}
-      />
-      <img
-        src="/timeline/2026-03-05_go_kart_cockpit.webp"
-        alt="Go-Kart cockpit hardware"
-        width={400}
-      />
-      <p>March 2025</p>
+      <p>
+        Hello my name is Dean. I'm currently studying computer science in west
+        Germany.
+      </p>
+      <h2>September 2026</h2>
+      Begin of studying computer science in University.
+      <h2>June 2026</h2>
+      <p>
+        Server hosting, cluster management with Kubernetes, backups, security,
+        continuous integration and this Website.
+      </p>
+      <div style="position: relative;">
+        <h2>February 2026</h2>
+        <div class="circuit-background"></div>
+        <div class="image-grid">
+          <img
+            style="grid-row: 1;"
+            src="/timeline/2026-03-05_go_kart_cockpit.webp"
+            alt="Go-Kart cockpit hardware"
+            width={400}
+          />
+          <img
+            style="grid-row: 2;"
+            src="/timeline/2026-02-17_pcb.png"
+            alt="3D view of a Go-Kart Circuit I designed and built."
+            width={400}
+          />
+          <img
+            style="grid-row: span 2;"
+            src="/timeline/2026-02-19_go_kart.webp"
+            alt="Go-Kart"
+            width={400}
+          />
+        </div>
+      </div>
+      <p>
+        The <ExternalLink href="https://github.com/deanqx/go-kart">
+          go-kart
+        </ExternalLink> project really got my love and nerves. It was the final project
+        on that school and spanned over one year. In a team of four we upgraded a
+        Kettcar with typical things from a car using AVR microcontrollers and self
+        designed PCBs. This project was developed since many years and turned over
+        the time into an undocumented mess. My role was the cockpit, lights and structuring
+        the CAN-Bus communication. So picked that what I like microcontrollers and
+        a lot of C programming.
+      </p>
+      <h2>March 2025</h2>
       <video
         src="/timeline/2025-03-07_first_pcb.webm"
         type="video/mp4"
@@ -51,10 +75,34 @@ import Header from "../components/Header.astro";
         loop
         playinline
         width="700"></video>
-      <p>February 2024</p>
+      <p>
+        My first self designed PCB in school. In the previous year we learned
+        the basics of electronics: voltage, current, circuits, resistance,
+        capacity, inductivity and more. The PCB project extended the list with
+        Transistors, Thyristors, Diodes and reading datasheets.
+      </p>
+      <h2>Oktober 2024</h2>
+      <img
+        src="/timeline/2024-10-03_parade_float.webp"
+        alt="Parade Float"
+        width={700}
+      />
+      My classmates and I built a float for the Oktober parade in Germany. My job
+      was to develop the motor controller. At this time I never used a microcontroller
+      before. An Arduino R3 board was used but to make it a bit harder I choose to
+      program in C instead of Arduino. I even controlled the stepper motors with a
+      custom program: <ExternalLink
+        href="https://github.com/deanqx/avr-motor-controller"
+      >
+        avr-motor-controller at Github
+      </ExternalLink>. I wouldn't recommend using that library, it's missing the
+      ability to power the motor smoothly with PWM.
+      <h2>June 2024</h2>
+      <p>Webapp for a Retirement home</p>
+      <h2>February 2024</h2>
       <video
         src="/timeline/2024-02-03_fluffy.mp4"
-        alt="2D Game where you play a cloud and dodge air planes."
+        alt="2D Game where you play a cloud and dodge airplanes."
         type="video/mp4"
         loading="lazy"
         muted
@@ -62,71 +110,175 @@ import Header from "../components/Header.astro";
         loop
         playinline
         width="700"></video>
-      <p>February 2023</p>
+      My first year in high school (Abitur). In the Java programming class we got
+      the task to follow a 2D game tutorial and create a documentation. Retyping the
+      tutorial was a bit boring, so I made my own version: <ExternalLink
+        href="https://github.com/deanqx/Fluffy"
+      >
+        Fluffy
+      </ExternalLink><br /> Despite my large time investment I got a bad grade for
+      it because it didn't followed the tutorial. Anyway the visitors on Open House
+      day loved it.
+      <h2>June 2023</h2>
+      <p>
+        Built a tool to show server temperature and other metrics on a Website.
+        This was my first project that used Rust. The backend used <ExternalLink
+          href="https://github.com/tokio-rs/axum">Rust axum</ExternalLink
+        > and vanilla Javascript was used for the frontend.
+      </p>
+      <h2>February 2023</h2>
       <img
         src="/timeline/2023-02-28_3d_game.webp"
         alt="Working on a 3D Game"
         width={700}
       />
-      <p>August 2021</p>
+      In a prototype called <ExternalLink
+        href="https://github.com/deanqx/Shadow-Intruder"
+      >
+        Shadow-Intruder
+      </ExternalLink> experimented with procedural world generation, path finding
+      (using A*), 3D modeling and game mechanics like shooting and movement. <br
+      />
+      The image shows four generated world tiles with water, grass and mountains.
+      You can see how I was debugging the lighting, I visualized the poly normal vectors
+      with a script in different colors. Normals are used to calculate basic lighting.
+      The lighting didn't look correct on border of tiles. To fix this the adjacent
+      polygons had to be included for the normal vector calculation. The adjacent
+      polygons are highlighted in pink.<br />
+      This was before my higher education (Abitur) and I hadn't learned about vectors
+      in school. I watched YouTube tutorials about Linear Algebra.
+      <h2>August 2021</h2>
       <img
         src="/timeline/2021-08-07_third_setup.webp"
         alt="Third computer setup"
         width={700}
       />
-      <p>June 2019</p>
-      <video
-        src="/timeline/2019-05-27_casino.webm"
-        alt="Small virtual casino app"
-        type="video/mp4"
-        loading="lazy"
-        muted
-        autoplay
-        loop
-        playinline
-        width="700"></video>
+      New equipment and new projects. I loved and still love the YouTube Videos about
+      AI learning to play a game. So I wanted to learn how AI works. But I didn't
+      wanted to just use an existing library -- I wanted to know it worked behind
+      the scenes. After all this wasn't a project that needed to be deployed. Note
+      that I started it before the AI hype with the ChatGPT 3 release in 2022. At
+      this time I also learned about Git and GitHub. So I built the C++ library called
+      <ExternalLink href="https://github.com/deanqx/Seayon">Seayon</ExternalLink
+      > only following the YouTube series of <ExternalLink
+        href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"
+        >3Blue1Brown on Neural Networks</ExternalLink
+      >. My goal was to use it as a trading AI. Spoiler: you can't beat
+      Wallstreet with a plain Neural Network. In the end I still learned a lot
+      and improved my math grades.
+      <h2>December 2020</h2>
+      <p>
+        Built an Android app for a Butcher with multiple shops, so customers can
+        read information about a specific product. The product information was
+        provided in the form of PDFs.
+      </p>
+      <h2>June 2019</h2>
       <img
         src="/timeline/2019-05-23_second_setup.webp"
         alt="Second computer setup"
         width={500}
       />
-      <p>February 2016</p>
+      <p>
+        The Minecraft server wasn't really as popular as I hoped, so I abandoned
+        the server as well as my YouTube Channel in 2018. Surprisingly a few
+        friends actually starting playing a lot on it in 2020 when I already
+        lost the interest. In 2019, I got an actual desk and started learning
+        about Java, C# and Desktop App development. I liked the idea of
+        cryptocurrency, so I built a digital bank (<ExternalLink
+          href="https://github.com/deanqx/BankDemo"
+          >BankDemo at GitHub
+        </ExternalLink>) with a Server-Client system without encryption. The
+        tutorial I followed was about a chat program using Java. After that I
+        wanted to look into C# which I did by building a Steam clone (<ExternalLink
+          href="https://github.com/deanqx/ArcadeHub"
+        >
+          ArcadeHub at GitHub
+        </ExternalLink>).
+      </p>
+      <h2>2017</h2>
+      <p>
+        Published a <ExternalLink
+          href="https://www.youtube.com/watch?v=pCqS7dqVr1Q"
+          >YouTube video</ExternalLink
+        > about the Minecraft server. I was 12 years old at this point.
+      </p>
+      <h2>February 2016</h2>
       <img
         src="/timeline/2016-02-08_first_setup.webp"
         alt="First computer setup"
         width={500}
       />
-
-      <p>12/2024 - 01/2025 web-login-demo</p>
-      <p>06/2024 - 11/2024 Webapp für ein Altenheim:</p>
       <p>
-        06/2023 – 06/2024 Server-Auslastungs-Tool: Entwicklung eines internen
-        Tools zur Limitierung und Überwachung der Serverlast.
+        Starting from 2014, I was a big Minecraft fan. About 2016 came the idea
+        to build my own Minecraft server. My advantage was that my fathers runs
+        a technical company and had a Windows server for me to use.
       </p>
+      <h2>before 2016</h2>
       <p>
-        12/2020 – 01/2021 Android-App für eine Metzgerei: Ermöglicht Kunden,
-        Informationen zu einem Produkt einzusehen.
+        My first contact with things outside the normal user space started with
+        a video on YouTube about "hacking" a Wi-Fi password with the Windows
+        command line. It wasn't about actual hacking but rather reading the
+        password of the stored Wifis. After all that didn't really matter
+        because it successfully showed me my Wi-Fi password, and I was convinced
+        <code>cmd.exe</code> was some kind of hacker tool. I wanted to learn more,
+        so I searched on YouTube and found this series: <ExternalLink
+          href="https://www.youtube.com/watch?v=CvNvUlQ6Knw"
+        >
+          CMD Tutorial Deutsch von ANSPictures (2010)
+        </ExternalLink>
       </p>
-      <p>08/2020 – 05/2023 Seayon</p>
-      <p>06/2024 – heute KOWATSCH it-Service</p>
-      <p>10/2020 – 05/2021 Thalmaier Logistik und EDV</p>
+      <h2>November 2014</h2>
+      <p>
+        Start of YouTube Channel: Recorded gaming videos with Phone and later
+        learned about on system recording with OBS.
+      </p>
     </main>
     <Footer />
+
+    <style>
+      main {
+        max-width: 1024px;
+      }
+
+      video,
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+      }
+
+      .circuit-background {
+        mask-image: url("/timeline/2026-03-06_circuit.svg");
+        mask-size: contain;
+        mask-position: top;
+        mask-repeat: no-repeat;
+        background-color: currentcolor;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        margin-top: 1lh;
+      }
+
+      .image-grid {
+        margin-top: 5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 2em;
+        margin-bottom: 1em;
+      }
+
+      .image-grid img {
+        height: 100%;
+      }
+
+      @media (width <= 720px) {
+        .image-grid {
+          grid-template-columns: 1fr;
+          gap: 0.5em;
+        }
+      }
+    </style>
   </body>
 </html>
-<style>
-  main {
-    max-width: 1024px;
-  }
-
-  .circuit-background {
-    mask-image: url("/timeline/2026-03-06_circuit.svg");
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    background-color: currentcolor;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-  }
-</style>
