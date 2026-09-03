@@ -12,6 +12,8 @@
   --text: #111;
   --text-muted: oklch(40% 0.05 259deg);
   --primary: oklch(40% 0.2 259deg);
+  --code-color: oklch(40% 0.01 259deg);
+  --inline-code-color: oklch(85% 0.01 259deg);
 
   /* Definitions */
   --border: 1px solid var(--border-color);
@@ -35,6 +37,8 @@
   --bg: oklch(20% 0.01 259deg);
   --bg-mid: oklch(25% 0.01 259deg);
   --bg-top: oklch(30% 0.01 259deg);
+  --code-color: oklch(30% 0.01 259deg);
+  --inline-code-color: var(--code-color);
   --hover-color: oklch(35% 0.015 259deg);
   --border-color: oklch(40% 0.01 259deg);
   --text: #eee;
@@ -157,12 +161,13 @@ code {
 /* Inline code */
 :not(pre) > code {
   padding: 0.2em 0.4em;
-  background-color: var(--fg-light);
+  background-color: var(--inline-code-color);
   border-radius: 6px;
 }
 
 /* Code blocks */
 pre {
+  background-color: var(--code-color) !important;
   padding: 1em;
   border-radius: 6px;
   line-height: 1.45;
