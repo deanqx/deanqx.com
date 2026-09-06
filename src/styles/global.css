@@ -194,7 +194,7 @@ hr {
   }
 }
 
-@media (width >= 721px) {
+@media (width > 720px) {
   .mobile-only {
     display: none !important;
   }
